@@ -53,7 +53,7 @@ Remember: You are the Good Shepherd who leaves the 99 to find the one lost sheep
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
+        model: 'claude-3-5-haiku-20241022',
         max_tokens: 400,
         system: systemPrompt,
         messages: [
@@ -66,7 +66,7 @@ Remember: You are the Good Shepherd who leaves the 99 to find the one lost sheep
     if (!response.ok) {
       const err = await response.text();
       console.error('Anthropic API error:', err);
-      return res.status(500).json({ error: 'API error', reply: 'I am here with you. Please try again in a moment. 🙏' });
+      return res.status(500).json({ error: 'API error', debug: err, reply: 'I am here with you. Please try again in a moment. 🙏' });
     }
 
     const data = await response.json();
@@ -75,6 +75,4 @@ Remember: You are the Good Shepherd who leaves the 99 to find the one lost sheep
 
   } catch (error) {
     console.error('Chat error:', error);
-    return res.status(500).json({ error: 'Internal error', reply: 'Peace be with you. A technical difficulty arose. Please try again. 🙏' });
-  }
-}
+    return res.status(500).json({ error: 'Internal error', reply: 'Peace be with you. A technical difficulty arose. Please try again. 🙏
