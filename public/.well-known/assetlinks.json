@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.thankyoujesus.app",
+        "sha256_cert_fingerprints": ["6F:EC:03:07:46:7C:6C:C4:1D:52:25:3A:D3:12:A0:66:6C:B1:04:5F:26:01:28:50:08:87:BE:83:C5:36:AB:64"]
+      }
+    }]
